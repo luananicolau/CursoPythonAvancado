@@ -1,6 +1,10 @@
 """
 Conjuntos
 
+
+OBS: em conjuntos, não definimos a order dos elementos
+
+
 - Conjuntos em qualquer linguagem de programação, estamos fazendo referencia a teoria dos conjuntos da matemática
 
 - aqui no python, os conjuntos são chamados de sets
