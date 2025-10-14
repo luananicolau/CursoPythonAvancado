@@ -366,5 +366,7 @@ print(nova)
 # veja que utilizamos a cópia via atribuição e copiamos os dados da lista para a nova lista, mas
 # após realizar modificação em uma das listas, essa modificação se refletiu em ambas as listas.
 # Isso em Python é chamado de Shallow Copy
+
 """
+
 
