@@ -1,3 +1,11 @@
+"""
+set comprehension
+
+lista = [1,2,3,4,5]
+set = {1,2,3,4,5}
+"""
+
+
 numeros = {num for num in range(1, 7)}
 print(numeros)
 
