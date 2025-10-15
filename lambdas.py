@@ -22,7 +22,7 @@ nome_completo = (
     lambda nome, sobrenome: nome.strip().title() + " " + sobrenome.strip().title()
 )
 
-print(nome_completo("vinícius", "lenci"))
+print(nome_completo("luana", "nicolau"))
 
 cantores = [
     "Felipe Tito",
