@@ -64,7 +64,7 @@ print(type(outra_funcao()))
 """
 # Vamos criar uma função para jogar a moeda
 
-from random import random
+from modulo_random import random
 
 from ordered_dict import valor
 
