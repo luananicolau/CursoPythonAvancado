@@ -40,6 +40,8 @@ print(p1.desconto(10))
 
 print(Produto.desconto(p1, 40)) # self, desconto
 
+# Métodos de classe em Python são conhecidos como métodos estaticos em outras linguagens
+
 """
 
 
@@ -62,11 +64,30 @@ class Produto:
 from passlib.hash import pbkdf2_sha256 as cryp
 
 class Usuario:
+
+    contador = 0
+
+    @classmethod
+    def conta_usuarios(cls):
+        print(f'classe: {cls}')
+        print(f'temos {cls.contador} usuario (s) no sistema')
+
+    @classmethod
+    def ver (cls):
+        print('teste')
+
+    @staticmethod
+    def definicao():
+        return 'UXR455'
+
+
     def __init__(self, nome,sobrenome,  email, senha):
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__email = email
         self.__senha = cryp.encrypt(senha, rounds=200000, salt_size= 16)
+        Usuario.contador = self.__id
+        print(f'usuario criado: {self.__gera_usuario()}')
 
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
@@ -91,4 +112,28 @@ if senha == confirma_senha:
 else:
     print('usuario criado com sucesso!')
 
-    
+
+# Métodos de Classe
+
+user = Usuario('Felicity', 'Jones', 'felicity@gmail.com', '123456')
+
+Usuario.conta_usuarios() # forma correta
+user.conta_usuarios() # possivel, mas incorreta
+
+
+def __gera_usuario(self):
+    return self.__email.split('@')[0]
+
+print(user._Usuario__gera_usuario()) # Acesso, de forma ruim...
+
+#Método estático
+
+print(Usuario.contador)
+
+print(Usuario.definicao())
+
+user = Usuario('Felicity', 'Jones', 'felicity@gmail.com', '123456')
+
+print(user.contador)
+
+print(user.definicao())
